@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Philodorima</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Philodorima</h1>
+        <form id="input-form">
+            <input type="number" id="tip-amount" placeholder="0.00€" required> 
+            <input type="date" id="tip-date" placeholder="none" required>
+            <input type="text" id="tip-comment" placeholder="Comment">
+            <button type="submit">Προσθήκη</button>
+        </form>
+        <div class="tips-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ποσό</th>
+                        <th>Ημερομηνία</th>
+                        <th>Επιλογές</th>
+                    </tr>
+                </thead>
+                <tbody id="tips-list"></tbody>
+                <div class="total-amount">
+                    <strong>Σύνολο:</strong> €<span id="total-amount">0</span>
+                </div>
+            </table>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
