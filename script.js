@@ -77,10 +77,21 @@ function displayTips(tips) {
 
         tipsList.appendChild(row);
     });
+
+    localStorage.setItem("tipsData", JSON.stringify(tips));
+
 };
 
 function updateTotalAmount() {
         const total = tips.reduce((sum, tip) => sum + tip.amount, 0);
         totalAmount.textContent = total.toFixed(2);
     };
+
+    const savedTips = localStorage.getItem("tipsData");
+if (savedTips) {
+    tips = JSON.parse(savedTips);
+    displayTips(tips);
+    updateTotalAmount();
+}
+
 });
