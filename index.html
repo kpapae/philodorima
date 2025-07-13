@@ -10,7 +10,7 @@
     <div class="container">
         <h1>Philodorima</h1>
         <form id="input-form">
-            <input type="number" id="tip-amount" placeholder="0.00€" required> 
+            <input type="number" id="tip-amount" placeholder="0.00€" step="0.01" required>
             <input type="date" id="tip-date" placeholder="none" required>
             <input type="text" id="tip-comment" placeholder="Comment">
             <button type="submit">Προσθήκη</button>
@@ -25,9 +25,11 @@
                     </tr>
                 </thead>
                 <tbody id="tips-list"></tbody>
+                <tfoot>
                 <div class="total-amount">
                     <strong>Σύνολο:</strong> €<span id="total-amount">0</span>
                 </div>
+                </tfoot>
             </table>
         </div>
 
